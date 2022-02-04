@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './App.css';
 import Particles from 'react-tsparticles';
-import { Card } from './Components/Card';
-import { useContext } from 'react/cjs/react.development';
+import { CardList } from './Components/Card/CardList';
 import { PokemonContext } from './Context/PokemonContext';
 
 function App() {
@@ -16,8 +15,7 @@ function App() {
   };
 
   //contextApi
-  const states = useContext(PokemonContext);
-
+  const { loading } = useContext(PokemonContext);
 
   return (
     <div className='App'>
@@ -105,9 +103,9 @@ function App() {
         }}
       />
 
-      <Card />
+      <CardList />
 
-      {states.loading ? <h1>Loading...</h1> : (
+      {loading ? <h1>Loading...</h1> : (
         <h1>Data is alredy done.</h1>
       )}
 
