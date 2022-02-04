@@ -24,32 +24,6 @@ export const ContentCard = styled.div`
     backdrop-filter: blur(3px);
     overflow: hidden;
 
-    ${'' /* &::before {
-        content: '';
-        position: absolute;
-        width: 80px;
-        height: 340px;
-        background: linear-gradient(#00ccff, #d400d4);
-        animation: animate 4s linear infinite;
-    }
-
-    &::after {
-        content: '';
-        border-radius: 15px;
-        position: absolute;
-        inset: 2px;
-        background: rgba(255, 255, 255);
-    }
-
-    @keyframes animate {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
-    } */}
-
 `
 
 export const Content = styled.div`
