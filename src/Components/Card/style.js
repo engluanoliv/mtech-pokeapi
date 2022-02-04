@@ -9,41 +9,77 @@ export const ContainerCard = styled.div`
 `
 
 export const ContentCard = styled.div`
-    width: 230px;
-    height: 320px;  
+    width: 200px;
+    height: 280px;  
     margin: 30px;
-    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.1);
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.07);
     overflow: hidden;
     display: flex;
     justify-content: center;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
+    overflow: hidden;
+
+    ${'' /* &::before {
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 340px;
+        background: linear-gradient(#00ccff, #d400d4);
+        animation: animate 4s linear infinite;
+    }
+
+    &::after {
+        content: '';
+        border-radius: 15px;
+        position: absolute;
+        inset: 2px;
+        background: rgba(255, 255, 255);
+    }
+
+    @keyframes animate {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    } */}
+
 `
 
 export const Content = styled.div`
     padding: 20px;
+    border-radius: 20px;
     text-align: center;
     transition: 0.5s;
+    position: relative;
+    z-index: 1;
 `
 
 export const Avatar = styled.img`
-    ${'' /* font-size: 5em; */}
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     margin: 0px;
-    ${'' /* color: rgba(0, 0, 0, 0.05); */}
     pointer-events: none;
 `
 
 export const Texth3 = styled.h3`
-    font-size: 1.8em;
+    font-size: 1.3em;
     color: rgba(0,0,0);
-    margin: 0px;
+    margin: 10px;
+    font-family: 'Roboto'
 
+    &::after {
+        content: '';
+        height: 3px;
+        background: #f2f2f2;
+    }
 `
 
 export const Textp = styled.p`
@@ -51,8 +87,6 @@ export const Textp = styled.p`
     color: rgba(0,0,0);
     font-weight: 300;
     margin: 0px;
-    padding-top: 15px;
-    padding-bottom: 15px;
 `
 
 export const Texta = styled.a` 

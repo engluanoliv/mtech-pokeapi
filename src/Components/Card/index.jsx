@@ -1,42 +1,44 @@
-import React, { useEffect, useContext } from "react";
-import api from "../../Services/api";
-import imageAvatar from '../../assets/pokemon.png';
-import { PokemonContext } from "../../Context/PokemonContext";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import {
     ContainerCard,
     ContentCard,
     Content,
     Avatar,
     Texth3,
-    Textp,
-    Texta
+    Textp
 } from "./style";
 
-export const Card = ({ name }) => {
 
-    const { pokemonData, setPokemonData } = useContext(PokemonContext);
+export const Card = ({ thisPokemon }) => {
 
-    
+    const [pokemonData, setPokemonData] = useState({
+        name: "",
+        sprites: {
+            front_default: ""
+        },
+        height: "",
+        weight: "",
+    });
 
     useEffect(() => {
-        const fetchPokemonData = async () => {
-            const res = await api(`pokemon/${name}`);
+        const fetchPokemonData = async (url) => {
+            const res = await axios.get(url);
             setPokemonData(res.data);
         }
-        fetchPokemonData();
-    }, [])
+        fetchPokemonData(thisPokemon.url);
+    }, [thisPokemon])
 
-    // console.log(pokemonData);
 
     return (
         <>
             <ContainerCard>
                 <ContentCard>
                     <Content>
-                        <Avatar src={imageAvatar} />
-                        <Texth3>{name}</Texth3>
-                        <Textp>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt.</Textp>
-                        <Texta> See More </Texta>
+                        <Avatar src={pokemonData.sprites.front_default} />
+                        <Texth3>{pokemonData.name}</Texth3>
+                        <Textp>Altura: {pokemonData.height}m</Textp>
+                        <Textp>Peso: {pokemonData.weight}kg</Textp>
                     </Content>
                 </ContentCard>
             </ContainerCard>
