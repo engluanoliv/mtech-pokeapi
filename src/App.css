@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 .App {
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.9);
+  /* background-color: rgba(255, 255, 255, 0.9); */
+  background: linear-gradient(331.06deg, #000000 -4.19%, #343A42 93.63%);
 }
 
 .mainContent {
@@ -12,4 +15,17 @@
 
 .footer {
   display: flex;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 30px;
+}
+
+.loadingPokemons {
+  color: #fff;
+  font-family: Poppins;
+  margin: 0px;
+  padding-top: 20px;
 }

@@ -9,20 +9,20 @@ export const ContainerCard = styled.div`
 `
 
 export const ContentCard = styled.div`
-    width: 200px;
-    height: 280px;  
-    margin: 30px;
+    width: 170px;
+    height: 250px;  
+    margin: 15px;
     align-items: center;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.07);
     overflow: hidden;
     display: flex;
     justify-content: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(3px);
     overflow: hidden;
+    background: rgba( 252, 253, 255, 0.03);
+    box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.25 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 `
 
@@ -44,21 +44,24 @@ export const Avatar = styled.img`
 `
 
 export const Texth3 = styled.h3`
-    font-size: 1.3em;
-    color: rgba(0,0,0);
-    margin: 10px;
-    font-family: 'Roboto'
 
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #fff;
     &::after {
         content: '';
-        height: 3px;
-        background: #f2f2f2;
+        display: block;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #fff;
     }
 `
 
 export const Textp = styled.p`
     font-size: 1em;
-    color: rgba(0,0,0);
+    color: #fff;
     font-weight: 300;
     margin: 0px;
 `

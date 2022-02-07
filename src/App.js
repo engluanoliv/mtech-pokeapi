@@ -95,10 +95,10 @@ function App() {
           },
           particles: {
             color: {
-              value: "#00ccff",
+              value: "#fff",
             },
             links: {
-              color: "#000",
+              color: "#fff",
               distance: 150,
               enable: true,
               opacity: 0.5,
@@ -140,16 +140,16 @@ function App() {
       {/* loading pokemon */}
       <div>
         <div>
-          {loading ? <h4 style={{ margin: "0px" }}>Carregando Pokemóns...</h4> : (
+          {loading ? <h1 class='loadingPokemons'>Carregando Pokemóns...</h1> : (
             <>
-              <h4 style={{ margin: "0px" }}>Pokemóns Carregados</h4>
+              {/* <h1 class='loadingPokemons'>Pokemóns Carregados</h1> */}
             </>
           )}
         </div>
       </div>
 
       {/* Buttons */}
-      <div>
+      <div class='buttons'>
         <PageButton page={prev} name={'Anterior'} />
         <PageButton page={next} name={'Proxima'} />
       </div>
@@ -157,6 +157,12 @@ function App() {
       {/* Cards */}
       <div className='mainContent'>
         <CardList pokemon={allData} />
+      </div>
+
+      {/* Buttons */}
+      <div class='buttons'>
+        <PageButton page={prev} name={'Anterior'} />
+        <PageButton page={next} name={'Próxima'} />
       </div>
 
     </div>

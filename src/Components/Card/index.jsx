@@ -29,6 +29,11 @@ export const Card = ({ thisPokemon }) => {
         fetchPokemonData(thisPokemon.url);
     }, [thisPokemon])
 
+    //Captalize the first letter
+    let string = pokemonData.name;
+
+    let cap = string.charAt(0).toUpperCase() + string.slice(1);
+
 
     return (
         <>
@@ -36,7 +41,7 @@ export const Card = ({ thisPokemon }) => {
                 <ContentCard>
                     <Content>
                         <Avatar src={pokemonData.sprites.front_default} />
-                        <Texth3>{pokemonData.name}</Texth3>
+                        <Texth3>{cap}</Texth3>
                         <Textp>Altura: {pokemonData.height}m</Textp>
                         <Textp>Peso: {pokemonData.weight}kg</Textp>
                     </Content>
