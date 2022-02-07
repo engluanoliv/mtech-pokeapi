@@ -1,21 +1,12 @@
 import styled from "styled-components";
 
 export const ContainerCard = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    z-index: 1;
-`
-
-export const ContentCard = styled.div`
     width: 170px;
     height: 250px;  
-    margin: 15px;
-    align-items: center;
-    overflow: hidden;
+    margin: 30px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     overflow: hidden;
     background: rgba( 252, 253, 255, 0.03);
     box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.25 );
@@ -23,11 +14,21 @@ export const ContentCard = styled.div`
     -webkit-backdrop-filter: blur( 5px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
+`
 
+export const ContentCard = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    z-index: 1;
+    background: rgba( 252, 253, 255, 0.09);
 `
 
 export const Content = styled.div`
-    padding: 20px;
+    ${'' /* padding: 20px; */}
     border-radius: 20px;
     text-align: center;
     transition: 0.5s;
@@ -50,6 +51,7 @@ export const Texth3 = styled.h3`
     font-weight: 600;
     font-size: 18px;
     line-height: 27px;
+    margin-top: 0px;
     color: #fff;
     &::after {
         content: '';

@@ -38,13 +38,13 @@ export const Card = ({ thisPokemon }) => {
     return (
         <>
             <ContainerCard>
+                <Content>
+                    <Avatar src={pokemonData.sprites.front_default} />
+                </Content>
                 <ContentCard>
-                    <Content>
-                        <Avatar src={pokemonData.sprites.front_default} />
-                        <Texth3>{cap}</Texth3>
-                        <Textp>Altura: {pokemonData.height}m</Textp>
-                        <Textp>Peso: {pokemonData.weight}kg</Textp>
-                    </Content>
+                    <Texth3>{cap}</Texth3>
+                    <Textp>Altura: {pokemonData.height}m</Textp>
+                    <Textp>Peso: {pokemonData.weight}kg</Textp>
                 </ContentCard>
             </ContainerCard>
         </>
