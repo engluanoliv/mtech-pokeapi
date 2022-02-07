@@ -12,6 +12,7 @@ import {
 
 export const Card = ({ thisPokemon }) => {
 
+    //Almost the interface
     const [pokemonData, setPokemonData] = useState({
         name: "",
         sprites: {
@@ -21,6 +22,7 @@ export const Card = ({ thisPokemon }) => {
         weight: "",
     });
 
+    //consume the second API, each pokemon information
     useEffect(() => {
         const fetchPokemonData = async (url) => {
             const res = await axios.get(url);
@@ -31,9 +33,7 @@ export const Card = ({ thisPokemon }) => {
 
     //Captalize the first letter
     let string = pokemonData.name;
-
     let cap = string.charAt(0).toUpperCase() + string.slice(1);
-
 
     return (
         <>

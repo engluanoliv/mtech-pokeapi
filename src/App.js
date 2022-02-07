@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import './App.css';
 import api from './Services/api';
 // import axios from 'axios';
@@ -6,6 +6,7 @@ import { PokemonContext } from './Context/PokemonContext';
 import Particles from 'react-tsparticles';
 import CardList from './Components/Card/CardList';
 import PageButton from './Components/Button';
+import InputSearch from './Components/Search';
 
 
 function App() {
@@ -19,10 +20,7 @@ function App() {
   };
 
   //contextApi
-  const { loading, setLoading, setNextUrl, setPrevUrl } = useContext(PokemonContext);
-
-  //useState to save all Data and pass by props to components
-  const [allData, setAllData] = useState([]);
+  const { loading, setLoading, setNextUrl, setPrevUrl, allData, setAllData } = useContext(PokemonContext);
 
   //First API
   useEffect(() => {
@@ -121,19 +119,21 @@ function App() {
       <div>
 
         <div>
-          {loading ? <h1 class='loadingPokemons'>Carregando Pokemóns...</h1> : (
-            <>
-              {/* <h1 class='loadingPokemons'>Pokemóns Carregados</h1> */}
-            </>
+
+          {loading ? <h1 className='loadingPokemons'>Carregando Pokemóns...</h1> : (
+            < InputSearch />
           )}
+
         </div>
 
       </div>
 
+
+
       {/* Buttons */}
-      <div class='buttons'>
-        <PageButton page='prev' name={'Anterior'} />
-        <PageButton page='next' name={'Proxima'} />
+      <div className='buttons'>
+        <PageButton page={'prev'} name={'Anterior'} />
+        <PageButton page={'next'} name={'Proxima'} />
       </div>
 
       {/* Cards */}
@@ -142,10 +142,10 @@ function App() {
       </div>
 
       {/* Buttons */}
-      {/* <div class='buttons'>
+      <div className='buttons'>
         <PageButton page={'prev'} name={'Anterior'} />
         <PageButton page={'next'} name={'Próxima'} />
-      </div> */}
+      </div>
 
     </div>
   );

@@ -6,7 +6,7 @@ import axios from "axios";
 const PageButton = ({ name, page }) => {
 
     const { setLoading, setAllData, nextUrl, setNextUrl, prevUrl, setPrevUrl } = useContext(PokemonContext);
-
+    
     //Function Next Button
     const next = async () => {
         setLoading(true);
@@ -30,7 +30,7 @@ const PageButton = ({ name, page }) => {
 
     return (
         <>
-            <Button onClick={page === 'prev' ? {prev} : {next}}>{name}</Button>
+            <Button onClick={(page === 'prev') ? prev : next}>{name}</Button>
         </>
     );
 }

@@ -7,6 +7,7 @@ export const PokemonProvider = (props) => {
     const [nextUrl, setNextUrl] = useState('');
     const [prevUrl, setPrevUrl] = useState('');
     const [loading, setLoading] = useState(true);
+    const [allData, setAllData] = useState([]);
     
 
     const states = {
@@ -16,6 +17,8 @@ export const PokemonProvider = (props) => {
         setPrevUrl,
         loading,
         setLoading,
+        allData,
+        setAllData
     }
 
     return (
