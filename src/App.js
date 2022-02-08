@@ -36,11 +36,11 @@ function App() {
 
 
   return (
+
     <div className='App'>
 
       {/* Particles  */}
-      <Particles
-        id="tsparticles"
+      <Particles id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
         options={{
@@ -112,8 +112,7 @@ function App() {
             },
           },
           detectRetina: true,
-        }}
-      />
+        }} />
 
       {/* loading pokemon */}
       <div>
@@ -127,8 +126,6 @@ function App() {
         </div>
 
       </div>
-
-
 
       {/* Buttons */}
       <div className='buttons'>
@@ -148,6 +145,7 @@ function App() {
       </div>
 
     </div>
+    
   );
 }
 
