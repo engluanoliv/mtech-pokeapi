@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerCard = styled.div`
-    width: 170px;
+    width: 250px;
     height: 250px;  
     margin: 30px;
     display: flex;
@@ -14,12 +14,21 @@ export const ContainerCard = styled.div`
     -webkit-backdrop-filter: blur( 5px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
+
+    &:hover {
+        transform: scale(1.12);
+        ${'' /* transition: transform .2s ease; */}
+        transition: transform .25s, visibility .25s ease;
+    }
+
+
 `
 
 export const ContentCard = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 10px;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -33,15 +42,28 @@ export const Content = styled.div`
     text-align: center;
     transition: 0.5s;
     position: relative;
-    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    &::before {
+        content: '';
+        background: #6e898424;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        position: absolute;
+        justify-content: center;
+        z-index: -1;
+    }
 `
 
 export const Avatar = styled.img`
     width: 100px;
     height: 100px;
-    border-radius: 50%;
     margin: 0px;
     pointer-events: none;
+    z-index: 1;
 `
 
 export const Texth3 = styled.h3`
@@ -52,6 +74,7 @@ export const Texth3 = styled.h3`
     font-size: 18px;
     line-height: 27px;
     margin-top: 0px;
+    margin-bottom: 0px;
     color: #fff;
     &::after {
         content: '';

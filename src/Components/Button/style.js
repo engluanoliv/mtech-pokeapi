@@ -5,13 +5,9 @@ export const Button = styled.button`
     padding-right: 25px;
     padding-top: 10px;
     padding-bottom: 10px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.07);
-    border: 0px;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(3px);
+    border: 1px solid #f2f2f2;
     color: #fff;
     font-weight: bold;
     margin: 15px;

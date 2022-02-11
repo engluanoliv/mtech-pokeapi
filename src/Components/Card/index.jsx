@@ -16,7 +16,11 @@ export const Card = ({ thisPokemon }) => {
     const [pokemonData, setPokemonData] = useState({
         name: "",
         sprites: {
-            front_default: ""
+            other: {
+                dream_world: {
+                    front_default: "",
+                }
+            }
         },
         height: "",
         weight: "",
@@ -28,7 +32,8 @@ export const Card = ({ thisPokemon }) => {
             const res = await axios.get(url);
             setPokemonData(res.data);
         }
-        fetchPokemonData(thisPokemon.url);
+        (thisPokemon.url) ? fetchPokemonData(thisPokemon.url) : fetchPokemonData(thisPokemon);
+
     }, [thisPokemon])
 
     //Captalize the first letter
@@ -39,7 +44,7 @@ export const Card = ({ thisPokemon }) => {
         <>
             <ContainerCard>
                 <Content>
-                    <Avatar src={pokemonData.sprites.front_default} />
+                    <Avatar src={pokemonData.sprites.other.dream_world.front_default} />
                 </Content>
                 <ContentCard>
                     <Texth3>{cap}</Texth3>

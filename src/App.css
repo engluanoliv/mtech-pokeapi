@@ -3,14 +3,19 @@
 .App {
   text-align: center;
   /* background-color: rgba(255, 255, 255, 0.9); */
-  background: linear-gradient(331.06deg, #000000 -4.19%, #343A42 93.63%);
+  /* background: linear-gradient(331.06deg, #000000 -4.19%, #343A42 93.63%); */
+  background-image: url('./assets/background.svg');
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .mainContent {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
 }
 
 .footer {
@@ -19,7 +24,7 @@
 
 .buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin: 0px 30px;
 }
 
