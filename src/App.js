@@ -42,6 +42,9 @@ function App() {
         <PageButton page={'next'} name={'Próxima'} />
       </div>
 
+      <p style={{color: 'white', marginBottom: '0px', fontSize: '13px'}}>Desenvolvido com ♥ por: <a style={{textDecoration: 'none', color: 'white'}} href='https://www.linkedin.com/in/francisco-luan-oliveira-458b7b14a'>Luan Oliveira</a></p>
+      <p style={{color: 'white', marginBottom: '0px', marginTop: '0px', fontSize: '13px', paddingBottom: '30px'}}>Contato: engluanoliv@gmail.com</p>
+
     </div>
 
   );

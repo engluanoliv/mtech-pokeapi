@@ -17,7 +17,7 @@ export const ContainerCard = styled.div`
     
 
     &:hover {
-        transform: scale(1.12);
+        transform: scale(1.2);
         ${'' /* transition: transform .2s ease; */}
         transition: transform .25s, visibility .25s ease;
     }
