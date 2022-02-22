@@ -25,6 +25,10 @@ const CardList = () => {
             {allData.map((val, idx) => (
                 <Card key={idx} thisPokemon={val} />
             ))}
+
+            {/* {allData.forEach((val, idx) => {
+                <Card key={idx} thisPokemon={val} />
+            })} */}
         </>
     );
 }

@@ -19,6 +19,9 @@ export const Card = ({ thisPokemon }) => {
             other: {
                 dream_world: {
                     front_default: "",
+                },
+                official_artwork: {
+                    front_default: "",
                 }
             }
         },
@@ -44,12 +47,12 @@ export const Card = ({ thisPokemon }) => {
         <>
             <ContainerCard>
                 <Content>
-                    <Avatar src={pokemonData.sprites.other.dream_world.front_default} />
+                    <Avatar src={pokemonData.sprites.other.official_artwork.front_default} />
                 </Content>
                 <ContentCard>
-                    <Texth3>{cap}</Texth3>
+                    {/* <Texth3>{cap}</Texth3>
                     <Textp>Altura: {pokemonData.height}m</Textp>
-                    <Textp>Peso: {pokemonData.weight}kg</Textp>
+                    <Textp>Peso: {pokemonData.weight}kg</Textp> */}
                 </ContentCard>
             </ContainerCard>
         </>

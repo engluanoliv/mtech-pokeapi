@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerCard = styled.div`
-    width: 250px;
+    ${'' /* width: 250px;
     height: 250px;  
     margin: 30px;
     display: flex;
@@ -20,33 +20,48 @@ export const ContainerCard = styled.div`
         transform: scale(1.2);
         ${'' /* transition: transform .2s ease; */}
         transition: transform .25s, visibility .25s ease;
-    }
+    } */}
+
+
+    width: 104px;
+    height: 112px;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+
+    /* FIRE */
+    border: 1px solid #F57D31;
+
+
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin: 8px;
 
 
 `
 
 export const ContentCard = styled.div`
-    display: flex;
+    ${'' /* display: flex;
     flex-direction: column;
     padding: 10px;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
     z-index: 1;
-    background: rgba( 252, 253, 255, 0.09);
+    background: rgba( 252, 253, 255, 0.09); */}
 `
 
 export const Content = styled.div`
     ${'' /* padding: 20px; */}
-    border-radius: 20px;
-    text-align: center;
-    transition: 0.5s;
-    position: relative;
+    ${'' /* border-radius: 20px; */}
+    ${'' /* transition: 0.5s; */}
+    ${'' /* position: relative; */}
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 25px;
-    &::before {
+    text-align: center;
+    ${'' /* padding-top: 25px; */}
+    ${'' /* &::before {
         content: '';
         background: #6e898424;
         width: 130px;
@@ -55,15 +70,17 @@ export const Content = styled.div`
         position: absolute;
         justify-content: center;
         z-index: -1;
-    }
+    } */}
 `
 
 export const Avatar = styled.img`
-    width: 100px;
-    height: 100px;
-    margin: 0px;
-    pointer-events: none;
-    z-index: 1;
+    ${'' /* width: 100px;
+    height: 100px; */}
+    width: 72px;
+    height: 72px;
+    ${'' /* margin: 0px; */}
+    ${'' /* pointer-events: none; */}
+    ${'' /* z-index: 1; */}
 `
 
 export const Texth3 = styled.h3`
